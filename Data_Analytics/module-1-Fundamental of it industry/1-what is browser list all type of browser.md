@@ -14,6 +14,7 @@ When you type **www.google.com** into a browser, it opens the Google website.
 # Types of Web Browsers
 
 ## 1. Google Chrome
+
 - Developed by: Google
 - Fast and easy to use
 - Most popular web browser
