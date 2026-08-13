@@ -1,0 +1,259 @@
+/* 
+  Khushali Kubavat - Premium Data Analytics Portfolio CSS
+  Custom styling, Theme Variables, Glassmorphism & Animations
+*/
+
+:root {
+  /* Dark Mode Default Theme Variables */
+  --bg-primary: #07111F;
+  --bg-secondary: #0B1F33;
+  --bg-card: rgba(15, 32, 53, 0.7);
+  --bg-card-hover: rgba(22, 45, 74, 0.85);
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(6, 182, 212, 0.4);
+  
+  --color-primary: #07111F;
+  --color-dark-blue: #0B1F33;
+  --color-electric-blue: #2563EB;
+  --color-cyan: #06B6D4;
+  --color-purple: #7C3AED;
+  
+  --glass-bg: rgba(11, 31, 51, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  
+  --glow-cyan: 0 0 25px rgba(6, 182, 212, 0.3);
+  --glow-blue: 0 0 25px rgba(37, 99, 235, 0.35);
+  --glow-purple: 0 0 25px rgba(124, 58, 237, 0.3);
+}
+
+/* Light Theme Overrides */
+html.light {
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #FFFFFF;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(241, 245, 249, 0.95);
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --border-color: rgba(15, 23, 42, 0.12);
+  --border-hover: rgba(37, 99, 235, 0.4);
+  
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(15, 23, 42, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.08);
+  
+  --glow-cyan: 0 0 20px rgba(6, 182, 212, 0.2);
+  --glow-blue: 0 0 20px rgba(37, 99, 235, 0.2);
+  --glow-purple: 0 0 20px rgba(124, 58, 237, 0.2);
+}
+
+/* Global Reset & Base Styling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Typography Font Families */
+.font-display {
+  font-family: 'Space Grotesk', 'Poppins', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+/* Custom Animated Background Grid Pattern */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(37, 99, 235, 0.07) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(37, 99, 235, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+html.light .bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+}
+
+.glass-nav {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Gradient Text Utilities */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #06B6D4 0%, #2563EB 50%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #38BDF8 0%, #06B6D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #A855F7 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 5px;
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 7s ease-in-out 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: rotate-slow 20s linear infinite;
+}
+
+/* Mobile Navigation Slide Drawer */
+.mobile-sidebar {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Active Nav Link Indicator */
+.nav-link.active {
+  color: #06B6D4;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #06B6D4, #2563EB);
+  border-radius: 2px;
+  margin-top: 4px;
+}
+
+/* Custom Checkmark Icon Animation */
+.skill-bar-inner {
+  transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Button Glowing Effects */
+.btn-glow-primary {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-glow-primary::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.btn-glow-primary:hover::before {
+  opacity: 1;
+}
+
+/* Toast Notification styling */
+#toast-container {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  z-index: 9999;
+}
+
+/* Modal styling */
+.modal-backdrop {
+  background-color: rgba(7, 17, 31, 0.85);
+  backdrop-filter: blur(8px);
+}
