@@ -2,7 +2,7 @@
 
 1. Install MySQL Community Server or SQLite on your system and verify the installation by connecting to the database using the command line or a GUI tool like MySQL Workbench or DB Browser for SQLite.
 
-
+![alt text](image-11.png)
 
 2. Create a new database named 'foodie_app' to simulate a Zomato-style backend.
 
