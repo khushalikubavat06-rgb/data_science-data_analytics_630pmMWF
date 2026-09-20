@@ -543,7 +543,26 @@ create table tble_student(
 ```
 
 
+# what is SQL window Function ?
 
+1. windows function are used to applied calculation and add unique rows in a tables there we use windows function 
 
+2. Windows funtion are use to add to set a rows releted to the current row without grouping the result into a single row 
+
+# Types of windows funtion 
+
+- row_number()
+- rank()
+- dense_rank()
+- NTILE()
+- LAG()
+- LEAD()
+- First_value()
+- Last_Value()
+- sum() over()
+- avg() over()
+- count() over()
+- max() over()
+- min() over()
 
 
