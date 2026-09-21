@@ -125,5 +125,6 @@ JOIN (
     LIMIT 5
 ) AS top_categories
 ON r.category = top_categories.category;
-```
-![alt text](image-5.png)
+
+![alt text](image-7.png)
+
