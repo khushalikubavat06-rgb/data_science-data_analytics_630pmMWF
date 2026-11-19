@@ -13,10 +13,10 @@
 #even_num = []
 #odd_num = []
 #for num in list1:
- #   if num % 2 == 0:
-  #      even_num.append(num)
-   # else:
-    #    odd_num.append(num)
+#   if num % 2 == 0:
+#      even_num.append(num)
+# else:
+#    odd_num.append(num)
 #print("Even numbers from list are : ", even_num)
 #print("Odd numbers from list are : ", odd_num)
 
